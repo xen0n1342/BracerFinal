@@ -2,8 +2,8 @@ $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
         adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/right.svg"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="icons/left.svg"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="icons/right.svg"></button>',
         autoplay: true,
         autoplaySpeed: 2000,
         fade: true,
@@ -132,7 +132,7 @@ $(document).ready(function(){
     function lazyloadRun() {
         let container = document.body;
         if(container) {
-            let img_list = container.getElementsByTagName('img');
+            let img_list = container.getElementsByTagName('img, iframe');
             for(let i = 0;i < img_list.length;i++) {
                 let el = img_list[i];
                 let data_src = el.getAttribute('data-src'); 
