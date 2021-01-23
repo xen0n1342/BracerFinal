@@ -128,4 +128,20 @@ $(document).ready(function(){
         $('.footer__arrow').toggleClass('footer__arrow_active');
         $('.footer__info').toggleClass('footer__info_active');
     });
+
+    function lazyloadRun() {
+        let container = document.body;
+        if(container) {
+            let img_list = container.getElementsByTagName('img');
+            for(let i = 0;i < img_list.length;i++) {
+                let el = img_list[i];
+                let data_src = el.getAttribute('data-src'); 
+                if(data_src) {
+                    el.setAttribute('src',data_src);
+                    el.lazy = '';
+                }
+            }
+        }
+    }
+    lazyloadRun();
 });
